@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="invoice">
+
+    <!-- Company Header -->
+    <div class="header">
+      <div class="company-info">
+        <h1>ArthaDisha</h1>
+        <p>7, Natraj Plaza, College Road.</p>
+        <p>Nashik, Maharashtra, India</p>
+      </div>
+      <div class="logo"><img src="Logo.png" alt="ArthaDisha Logo" height="80" width="100"></div>
+    </div>
+
+    <!-- Client Details -->
+    <div class="client-details">
+      <h3>Bill To:</h3>
+      <p>Name: Customer Name</p>
+      <p>Email: customer@example.com</p>
+      <p>Phone: +91 1234567890</p>
+      <p>Address: Customer Address Here</p>
+    </div>
+
+    <!-- Item Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Rate (₹)</th>
+          <th>Amount (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Service A</td>
+          <td><input type="number" value="1" class="qty"></td>
+          <td><input type="number" value="1000" class="rate"></td>
+          <td class="amount">1000</td>
+        </tr>
+        <tr>
+          <td>Service B</td>
+          <td><input type="number" value="2" class="qty"></td>
+          <td><input type="number" value="500" class="rate"></td>
+          <td class="amount">1000</td>
+        </tr>
+        <tr>
+          <td>Service C</td>
+          <td><input type="number" value="1" class="qty"></td>
+          <td><input type="number" value="750" class="rate"></td>
+          <td class="amount">750</td>
+        </tr>
+        <tr>
+          <td>Service D</td>
+          <td><input type="number" value="3" class="qty"></td>
+          <td><input type="number" value="300" class="rate"></td>
+          <td class="amount">900</td>
+        </tr>
+        <tr>
+          <td>Service E</td>
+          <td><input type="number" value="1" class="qty"></td>
+          <td><input type="number" value="450" class="rate"></td>
+          <td class="amount">450</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Totals -->
+    <div class="totals">
+      <div>
+        <span>Subtotal</span>
+        <span id="subtotal">₹0</span>
+      </div>
+      <div>
+        <span>GST (18%)</span>
+        <span id="gst">₹0</span>
+      </div>
+      <div class="grand-total">
+        <span>Grand Total</span>
+        <span id="grandTotal">₹0</span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
