@@ -19,6 +19,11 @@ function App() {
     gst: 0,
     grandTotal: 0,
   });
+  const [totals1, setTotals1] = useState({
+    subtotal: 0,
+    gst: 0,
+    grandTotal: 0,
+  });
   return (
     <>
       <div
@@ -57,8 +62,8 @@ function App() {
         <ClientInfo clientName = 'Customer2' clientEmail='client2@gmail.com' 
         clientNumber='0987654321'
         clientAddress='Pune, Maharashtra.' />
-        <InvoiceTable setTotals={setTotals} />
-        <InvoiceFooter totals={totals} />
+        <InvoiceTable setTotals={setTotals1} />
+        <InvoiceFooter totals={totals1} />
       </div>
     </>
   );
