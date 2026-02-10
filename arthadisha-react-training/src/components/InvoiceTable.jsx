@@ -1,27 +1,28 @@
 import React, { useEffect, useState } from "react";
 
+const tableThTd = {
+  border: "1px solid #ddd",
+  padding: "10px",
+  textAlign: "center",
+};
+
+const tableTh = {
+  background: "#f0f0f0",
+};
+
+const inputStyle = {
+  width: "100%",
+  padding: "5px",
+  textAlign: "center",
+};
+
+const Th = ({ children }) => (
+  <th style={{ ...tableThTd, ...tableTh }}>{children}</th>
+);
+
+const Td = ({ children }) => <td style={tableThTd}>{children}</td>;
+
 const InvoiceTable = ({ setTotals }) => {
-  const tableThTd = {
-    border: "1px solid #ddd",
-    padding: "10px",
-    textAlign: "center",
-  };
-
-  const tableTh = {
-    background: "#f0f0f0",
-  };
-
-  const inputStyle = {
-    width: "100%",
-    padding: "5px",
-    textAlign: "center",
-  };
-
-  const Th = ({ children }) => (
-    <th style={{ ...tableThTd, ...tableTh }}>{children}</th>
-  );
-
-  const Td = ({ children }) => <td style={tableThTd}>{children}</td>;
 
   const [rows, setRows] = useState([
     { item: "Service A", qty: 1, rate: 1000 },
@@ -32,20 +33,27 @@ const InvoiceTable = ({ setTotals }) => {
   ]);
 
   useEffect(() => {
-    const subtotal = rows.reduce(
+    const id = setTimeout(() => {
+      const subtotal = rows.reduce(
       (sum, row) => sum + row.qty * row.rate,
       0
     );
     const gst = subtotal * 0.18;
     const grandTotal = subtotal + gst;
 
-    setTotals({ subtotal, gst, grandTotal });
+      setTotals({ subtotal, gst, grandTotal });
+    }, 150);
+
+    return () => clearTimeout(id);
   }, [rows, setTotals]);
 
+
   const handleChange = (index, field, value) => {
-    const updatedRows = [...rows];
-    updatedRows[index][field] = Math.max(0, Number(value));
-    setRows(updatedRows);
+    if (value < 0) return;
+
+    setRows((prev) =>
+      prev.map((row, i) => (i === index ? { ...row, [field]: value } : row)),
+    );
   };
 
   return (
@@ -68,7 +76,7 @@ const InvoiceTable = ({ setTotals }) => {
 
         <tbody>
           {rows.map((row, index) => (
-            <tr key={index}>
+            <tr key={row.id}>
               <Td>{row.item}</Td>
 
               <Td>
@@ -77,9 +85,7 @@ const InvoiceTable = ({ setTotals }) => {
                   min="0"
                   value={row.qty}
                   style={inputStyle}
-                  onChange={(e) =>
-                    handleChange(index, "qty", e.target.value)
-                  }
+                  onChange={(e) => handleChange(index, "qty", e.target.value)}
                 />
               </Td>
 
@@ -89,9 +95,7 @@ const InvoiceTable = ({ setTotals }) => {
                   min="0"
                   value={row.rate}
                   style={inputStyle}
-                  onChange={(e) =>
-                    handleChange(index, "rate", e.target.value)
-                  }
+                  onChange={(e) => handleChange(index, "rate", e.target.value)}
                 />
               </Td>
 
