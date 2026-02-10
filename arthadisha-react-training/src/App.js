@@ -12,7 +12,7 @@ function App() {
     background: "#fff",
     padding: "20px",
     borderRadius: "8px",
-    marginBottom: '20px',
+    marginBottom: "20px",
   };
   const [totals, setTotals] = useState({
     subtotal: 0,
@@ -49,21 +49,29 @@ function App() {
           ></img>
         </div>
       </div>
-      <div style={invoiceStyle}>
-        <CompanyHeader />
-        <ClientInfo clientName = 'Customer1' clientEmail='client@gmail.com' 
-        clientNumber='1234567890'
-        clientAddress='Nashik, Maharashtra.' />
-        <InvoiceTable setTotals={setTotals} />
-        <InvoiceFooter totals={totals} />
-      </div>
-      <div style={invoiceStyle}>
-        <CompanyHeader />
-        <ClientInfo clientName = 'Customer2' clientEmail='client2@gmail.com' 
-        clientNumber='0987654321'
-        clientAddress='Pune, Maharashtra.' />
-        <InvoiceTable setTotals={setTotals1} />
-        <InvoiceFooter totals={totals1} />
+      <div style={{display:'flex'}}>
+        <div style={invoiceStyle}>
+          <CompanyHeader />
+          <ClientInfo
+            clientName="Customer1"
+            clientEmail="client@gmail.com"
+            clientNumber="1234567890"
+            clientAddress="Nashik, Maharashtra."
+          />
+          <InvoiceTable setTotals={setTotals} />
+          <InvoiceFooter totals={totals} />
+        </div>
+        <div style={invoiceStyle}>
+          <CompanyHeader />
+          <ClientInfo
+            clientName="Customer2"
+            clientEmail="client2@gmail.com"
+            clientNumber="0987654321"
+            clientAddress="Pune, Maharashtra."
+          />
+          <InvoiceTable setTotals={setTotals1} />
+          <InvoiceFooter totals={totals1} />
+        </div>
       </div>
     </>
   );
