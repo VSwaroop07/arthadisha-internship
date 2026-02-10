@@ -1,8 +1,14 @@
-*{
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
-
-.App{
+body {
+  background: #f4f6f8;
+  padding: 20px;
+}
+.App {
   padding: 1vh;
   margin: 2vh;
 }
