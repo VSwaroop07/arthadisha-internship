@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-const SimpleForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+const SimpleFormObject = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const BtnStyle = {
     margin: "10px",
     padding: "10px",
@@ -31,24 +33,35 @@ const SimpleForm = () => {
     marginBottom: "10px",
     justifyContent: "center",
   };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
   const handleSubmit = () => {
-  alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
-  setName("");
-  setEmail("");
-  setMessage("");
-};
+    alert(`Name:${formData.name}\nEmail:${formData.email}\nMessage:${formData.message}`);
+    setFormData({
+      name: "",
+      email: "",
+      message: ""
+    });
+  };
   return (
     <div style={box}>
-      <h2 style={{ textAlign: "left" }}>Task 1D Seprate State</h2>
+      <h2 style={{ textAlign: "left" }}>Task 1D State Object</h2>
       <div>
         <div style={formRow}>
           <label style={labelStyle}>Name :</label>
           <input
             type="text"
+            name="name"
             placeholder="Enter name"
             style={inp}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formData.name}
+            onChange={handleChange}
           />
         </div>
 
@@ -56,10 +69,11 @@ const SimpleForm = () => {
           <label style={labelStyle}>Email :</label>
           <input
             type="email"
+            name="email"
             placeholder="Enter email"
             style={inp}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.email}
+            onChange={handleChange}
           />
         </div>
 
@@ -67,17 +81,20 @@ const SimpleForm = () => {
           <label style={labelStyle}>Message :</label>
           <textarea
             placeholder="Message"
+            name="message"
             style={inp}
             rows={2}
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            value={formData.message}
+            onChange={handleChange}
           />
         </div>
 
-        <button style={BtnStyle} onClick={handleSubmit}>Submit</button>
+        <button style={BtnStyle} onClick={handleSubmit}>
+          Submit
+        </button>
       </div>
     </div>
   );
 };
 
-export default SimpleForm;
+export default SimpleFormObject;

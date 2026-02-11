@@ -8,6 +8,7 @@ import CounterApp from "./components/hooks-practice/CounterApp";
 import ToggleVisibility from "./components/hooks-practice/ToggleVisibility";
 import BackgroundColorChanger from "./components/hooks-practice/BackgroundColorChanger";
 import SimpleForm from "./components/hooks-practice/SimpleForm";
+import SimpleFormObject from "./components/hooks-practice/SimpleFormObject";
 function App() {
   // const date = new Date();
   const invoiceStyle = {
@@ -34,6 +35,7 @@ function App() {
       <ToggleVisibility/>
       <BackgroundColorChanger/>
       <SimpleForm/>
+      <SimpleFormObject/>
       {/* <div
         className="App"
         style={{ backgroundColor: "lightslategray", borderRadius: "20px" }}
