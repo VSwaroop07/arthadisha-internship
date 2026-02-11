@@ -6,6 +6,7 @@ import InvoiceFooter from "./components/InvoiceFooter";
 import { useState } from "react";
 import CounterApp from "./components/hooks-practice/CounterApp";
 import ToggleVisibility from "./components/hooks-practice/ToggleVisibility";
+import BackgroundColorChanger from "./components/hooks-practice/BackgroundColorChanger";
 function App() {
   // const date = new Date();
   const invoiceStyle = {
@@ -30,6 +31,7 @@ function App() {
     <>
       <CounterApp/>
       <ToggleVisibility/>
+      <BackgroundColorChanger/>
       {/* <div
         className="App"
         style={{ backgroundColor: "lightslategray", borderRadius: "20px" }}
