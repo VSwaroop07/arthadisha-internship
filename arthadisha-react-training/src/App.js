@@ -11,6 +11,7 @@ import SimpleForm from "./components/hooks-practice/SimpleForm";
 import SimpleFormObject from "./components/hooks-practice/SimpleFormObject";
 import DocumentcTitleUpdater from "./components/hooks-practice/DocumentTitleUpdater";
 import LiveClock from "./components/hooks-practice/LiveClock";
+import WindowWidthTracker from "./components/hooks-practice/WindowWidthTracker";
 function App() {
   // const date = new Date();
   const invoiceStyle = {
@@ -40,6 +41,7 @@ function App() {
       <SimpleFormObject/>
       <DocumentcTitleUpdater/>
       <LiveClock/>
+      <WindowWidthTracker/>
       {/* <div
         className="App"
         style={{ backgroundColor: "lightslategray", borderRadius: "20px" }}
