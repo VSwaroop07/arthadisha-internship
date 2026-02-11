@@ -16,7 +16,7 @@ import UserSearchApp from "./components/hooks-practice/UserSearchApp";
 import FocusInput from "./components/hooks-practice/FocusInput";
 import StopWatch from "./components/hooks-practice/StopWatch";
 function App() {
-  // const date = new Date();
+  const date = new Date();
   const invoiceStyle = {
     maxWidth: "900px",
     margin: "auto",
@@ -37,18 +37,7 @@ function App() {
   });
   return (
     <>
-      <CounterApp/>
-      <ToggleVisibility/>
-      <BackgroundColorChanger/>
-      <SimpleForm/>
-      <SimpleFormObject/>
-      <DocumentcTitleUpdater/>
-      <LiveClock/>
-      <WindowWidthTracker/>
-      <UserSearchApp/>
-      <FocusInput/>
-      <StopWatch/>
-      {/* <div
+      <div
         className="App"
         style={{ backgroundColor: "lightslategray", borderRadius: "20px" }}
       >
@@ -70,8 +59,19 @@ function App() {
             width={200}
           ></img>
         </div>
-      </div> */}
-      {/* <div style={{display:'flex'}}>
+      </div>
+      <CounterApp/>
+      <ToggleVisibility/>
+      <BackgroundColorChanger/>
+      <SimpleForm/>
+      <SimpleFormObject/>
+      <DocumentcTitleUpdater/>
+      <LiveClock/>
+      <WindowWidthTracker/>
+      <UserSearchApp/>
+      <FocusInput/>
+      <StopWatch/>
+      <div style={{display:'flex'}}>
         <div style={invoiceStyle}>
           <CompanyHeader />
           <ClientInfo
@@ -94,7 +94,7 @@ function App() {
           <InvoiceTable setTotals={setTotals1} />
           <InvoiceFooter totals={totals1} />
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
