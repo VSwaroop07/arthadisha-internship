@@ -19,8 +19,8 @@ const BackgroundColorChanger = () => {
     <div style={box}>
         <h2 style={{textAlign: 'left'}}>Task 1C</h2>
       <div style={{height: '300px', width: '300px', backgroundColor: color, margin: 'auto'}}>
-
       </div>
+      <h4>Current Color : {color}</h4>
       <button
         type="button"
         onClick={() => setColor("red")}
