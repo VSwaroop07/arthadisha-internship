@@ -13,6 +13,7 @@ import DocumentcTitleUpdater from "./components/hooks-practice/DocumentTitleUpda
 import LiveClock from "./components/hooks-practice/LiveClock";
 import WindowWidthTracker from "./components/hooks-practice/WindowWidthTracker";
 import UserSearchApp from "./components/hooks-practice/UserSearchApp";
+import FocusInput from "./components/hooks-practice/FocusInput";
 function App() {
   // const date = new Date();
   const invoiceStyle = {
@@ -44,6 +45,7 @@ function App() {
       <LiveClock/>
       <WindowWidthTracker/>
       <UserSearchApp/>
+      <FocusInput/>
       {/* <div
         className="App"
         style={{ backgroundColor: "lightslategray", borderRadius: "20px" }}
