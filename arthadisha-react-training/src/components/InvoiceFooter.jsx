@@ -25,7 +25,7 @@ const InvoiceFooter = ({totals}) => {
           <span>GST (18%)</span>
           <span id="gst">₹{(totals?.gst ?? 0).toFixed(2)}</span>
         </div>
-        <div class="grand-total" style={totalsDiv}>
+        <div className="grand-total" style={totalsDiv}>
           <span style={grantTotal}>Grand Total</span>
           <span style={grantTotal} id="grandTotal">₹{(totals?.grandTotal ?? 0).toFixed(2)}</span>
         </div>
