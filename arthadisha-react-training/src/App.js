@@ -14,6 +14,7 @@ import LiveClock from "./components/hooks-practice/LiveClock";
 import WindowWidthTracker from "./components/hooks-practice/WindowWidthTracker";
 import UserSearchApp from "./components/hooks-practice/UserSearchApp";
 import FocusInput from "./components/hooks-practice/FocusInput";
+import StopWatch from "./components/hooks-practice/StopWatch";
 function App() {
   // const date = new Date();
   const invoiceStyle = {
@@ -46,6 +47,7 @@ function App() {
       <WindowWidthTracker/>
       <UserSearchApp/>
       <FocusInput/>
+      <StopWatch/>
       {/* <div
         className="App"
         style={{ backgroundColor: "lightslategray", borderRadius: "20px" }}
@@ -69,7 +71,7 @@ function App() {
           ></img>
         </div>
       </div> */}
-      <div style={{display:'flex'}}>
+      {/* <div style={{display:'flex'}}>
         <div style={invoiceStyle}>
           <CompanyHeader />
           <ClientInfo
@@ -92,7 +94,7 @@ function App() {
           <InvoiceTable setTotals={setTotals1} />
           <InvoiceFooter totals={totals1} />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
