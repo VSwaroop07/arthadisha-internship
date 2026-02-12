@@ -1,0 +1,12 @@
+CREATE TABLE StudentsT (
+	StudentID INT PRIMARY KEY,
+	Name VARCHAR(50),
+	Marks INT
+);
+
+CREATE TABLE StudentLog (
+	LogID INT IDENTITY(1,1) PRIMARY KEY,
+	StudentID INT,
+	ActionType VARCHAR(20),
+	ActionTime DATETIME
+);
