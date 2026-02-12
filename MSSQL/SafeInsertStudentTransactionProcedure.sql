@@ -1,0 +1,17 @@
+CREATE PROCEDURE SafeInsertStudent
+	@StudentID INT,
+	@Name VARCHAR(50),
+	@Marks INT
+AS BEGIN
+	BEGIN TRANSACTION;
+
+	BEGIN TRY
+		INSERT INTO StudentsF VALUES(@StudentID, @Name, @Marks);
+
+		COMMIT TRANSACTION;
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRANSACTION;
+		PRINT 'Error occurred. Insert rolled back.';
+	END CATCH
+END;
