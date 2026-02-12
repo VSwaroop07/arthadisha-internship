@@ -1,0 +1,5 @@
+CREATE PROCEDURE GetAllStudents
+AS
+BEGIN
+	SELECT * FROM StudentsF;
+END;
