@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Runtime.InteropServices;
+using ArthaDisha_Training_C_;
         //Enums
         enum Status{
             Pending,
@@ -28,10 +29,30 @@ class Program
         //Nullable Value defination
         int? o = null;
 
-        
+        //classes
+        Task2 T1 = new Task2();
+                   
         Console.WriteLine("Hello, I am " + name + ". I am a Student. My Age is " + age);
 
         string abc = name.Replace("a", "x");
         Console.WriteLine(abc);
-    }
+
+        //Inheritance
+        Dog D = new Dog();
+        D.Bark();
+        D.Eat();
+
+        //Polymorphism
+        int a = 10;
+        int b = 20;
+        double c = 30;
+        double d = 50;
+        Calculator cs = new Calculator();
+        Console.WriteLine(cs.Add(a, b));
+        Console.WriteLine(cs.Add(c, d));
+
+        
+
+
+}
 }
