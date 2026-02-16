@@ -1,0 +1,26 @@
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  background: #fffaf5;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 24px 50px rgba(26, 33, 54, 0.12);
+}
+
+.auth-header {
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: #a15e2a;
+  font-weight: 600;
+}
