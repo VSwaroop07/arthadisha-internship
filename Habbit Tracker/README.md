@@ -1,16 +1,52 @@
-# React + Vite
+```markdown
+# Habit Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and effective application designed to help you build and maintain positive habits through daily tracking and progress visualization.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Custom Habit Creation**: Define your own habits with specific frequencies.
+- **Daily Check-ins**: Mark habits as completed each day with a single click.
+- **Progress Tracking**: Visualize your consistency and streaks over time.
+- **Reminders**: Stay on top of your goals with configurable notifications.
+- **Data Persistence**: Your progress is saved locally to ensure you never lose track of your journey.
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/habbit-tracker.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd habbit-tracker
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+To start the app in development mode:
+```bash
+npm start
+```
+
+## Usage
+
+1. **Add a Habit**: Click the "Add New Habit" button and enter the habit name.
+2. **Track**: Check the box next to the habit once you've completed it for the day.
+3. **Review**: Check the statistics dashboard to see your weekly and monthly performance.
+
+## License
+
+This project is licensed under the MIT License.
+```
